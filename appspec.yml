@@ -1,11 +1,11 @@
-version: 0.0
+version: 1.0
 os: linux
 files:
-  - source: ./
+  - source: /applaravel
     destination: /var/www/html/
-  - source: ./virtualhost.conf
+  - source: /virtualhost.conf
     destination: /etc/apache2/sites-available
 hooks:
   AfterInstall:
-    - location: ./scripts/after_install
+    - location: /scripts/after_install
       runas: ubuntu
